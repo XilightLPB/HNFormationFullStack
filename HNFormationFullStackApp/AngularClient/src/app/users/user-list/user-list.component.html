@@ -1,0 +1,25 @@
+<div class="card my-5">
+    <div class ="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope="col">User's Name</th>
+                    <th scope="col">User's mail</th>
+                    <th scope="col">User's Type</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                    
+                </tr>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let User of UsersList">
+                        <td>{{User.name}}</td>
+                        <td>{{User.email}}</td>
+                        <td>{{User.type.type}}</td>
+                        <td> <button type ="button" class="btn btn-danger" (click)="deletethisUser(User)">Delete that User</button></td>
+                        <td> <button class="btn btn-primary" [routerLink]="['/UserEdit', User.id]">Edit that User profile</button></td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+  </div>

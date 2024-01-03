@@ -1,0 +1,17 @@
+<div class="container-sm">
+    <div class="mx-auto">
+    <label for="TypeName" class="form-label" >Type Name? </label>
+    <input id="TypeName" type="text" class="form-control" size="50" [formControl]="Typename" placeholder={{userType.type}}>
+    <br>
+    <label for="ID" class="form-label" >Type's ID </label>
+    <input class="form-control" type="text" value={{id}} size="50" aria-label="Not generated ATM" disabled readonly>
+    <br>
+    <div class="mx-auto">
+    
+    </div>
+    <div class="d-grid gap-1 col-12 mx-auto">
+        <button type="button" (click)="SendAnswer()" class="btn btn-primary">Change the type name</button>
+        
+    </div>
+    </div>
+    </div>

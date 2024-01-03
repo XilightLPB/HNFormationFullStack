@@ -1,0 +1,49 @@
+[
+    {
+        "id": "1",
+        "name": "Erwan Maigne",
+        "email": "emaignemontamat@hn-services.fr",
+        "type" : {
+            "type": "Eleve",
+            "id": 1
+        }
+    },
+    {
+        "id": "2",
+        "name": "Baptiste",
+        "email": "baptiste@hn-services.fr",
+        "type" : {
+            "type": "Eleve",
+            "id": 1
+        }
+    },
+    {
+        "id": "3",
+        "name": "noemie",
+        "email": "noemie@hn-services.fr",
+        "type" : {
+            "type": "Eleve",
+            "id": 1
+        }
+    },
+    {
+        "id": "4",
+        "name": "Nicolas",
+        "email": "nicolas@hn-services.fr",
+        "type" : {
+            "type": "Formateur",
+            "id": 2
+        }
+    },
+    {
+        "id": "5",
+        "name": "Arnaud",
+        "email": "Arnaud@hn-services.fr",
+        "type" : {
+            "type": "Formateur",
+            "id": 2
+        }
+    }
+
+    
+]

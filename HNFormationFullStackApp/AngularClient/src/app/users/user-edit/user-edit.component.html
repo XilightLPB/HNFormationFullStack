@@ -1,0 +1,32 @@
+<div class="container-sm mx-auto">
+  <br>
+    <label for="name" class="form-label">Name: </label>
+    <br>
+    <input id="name" type="text" [formControl]="name" class="form-control">
+    <br>
+    <label for="email" class="form-label">Mail: </label>
+    <br>
+    <input id="email" type="mail" [formControl]="email" class="form-control">
+    <br>
+    <label for="Type" class="form-label">User's Type</label>
+    <br>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{type.type}}
+        </button>
+        <ul class="dropdown-menu">
+          <li *ngFor="let UserType of UserTypeList"><a class="dropdown-item" (click)="SetCurrentTypeOf(UserType)">{{UserType.type}}</a></li>
+          <li><a class="dropdown-item">No more type, consider creating the missing type you were searching for</a></li>
+        </ul>
+      </div>
+      <br>
+      <label for="ID" class="form-label" >User's ID </label>
+      <input id="HTMLID" class="form-control" type="text" value={{id}} size="50" aria-label="ID" disabled readonly>
+      <br>
+      <div class="d-grid gap-1 col-12 mx-auto">
+        <button type="button" (click)="SendAnswers()" class="btn btn-primary">Edit that User</button>
+        <button type ="button" class="btn btn-danger" (click)="deletethisUser()">Delete that User</button>
+        
+    </div>
+</div>

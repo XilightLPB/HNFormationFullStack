@@ -1,0 +1,9 @@
+{
+    "id": "4",
+    "name": "Nicolas",
+    "email": "nicolas@hn-services.fr",
+    "type" : {
+        "type": "Formateur",
+        "id": 2
+    }
+}

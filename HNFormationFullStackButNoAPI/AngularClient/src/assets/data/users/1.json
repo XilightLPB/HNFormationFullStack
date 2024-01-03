@@ -1,0 +1,9 @@
+{
+    "id": "1",
+    "name": "Erwan Maigne",
+    "email": "emaignemontamat@hn-services.fr",
+    "type" : {
+        "type": "Eleve",
+        "id": 1
+    }
+}

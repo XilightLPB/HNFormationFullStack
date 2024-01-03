@@ -1,0 +1,23 @@
+<div class="card my-5">
+    <div class ="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope="col">Type's Name</th>
+                    <th scope="col">Type's ID</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let UserType of UsersTypes">
+                        <td>{{UserType.type}}</td>
+                        <td>{{UserType.id}}</td>
+                        <td> <button type ="button" class="btn btn-danger" (click)="deletethisType(UserType.id)">Delete that Type</button></td>
+                        <td> <button class="btn btn-primary" [routerLink]="['/TypeEdit', UserType.id]">Edit that User</button></td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+[
+    {
+        "type": "Eleve",
+        "id": 1
+    },
+    {
+        "type": "Formateur",
+        "id": 2
+    }
+]

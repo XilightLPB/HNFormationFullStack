@@ -1,0 +1,9 @@
+{
+    "id": "3",
+    "name": "noemie",
+    "email": "noemie@hn-services.fr",
+    "type" : {
+        "type": "Eleve",
+        "id": 1
+    }
+}
