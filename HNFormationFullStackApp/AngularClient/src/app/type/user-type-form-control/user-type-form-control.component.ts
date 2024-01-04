@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { UserType } from '../../user-type';
+import { TypeUser } from '../../user-type';
 import { UserTypeServiceService } from '../../user-type-service.service';
 import { CommonModule, DOCUMENT } from '@angular/common';
 
@@ -11,28 +11,28 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   templateUrl: './user-type-form-control.component.html',
   styleUrl: './user-type-form-control.component.scss'
 })
-export class UserTypeFormControlComponent implements OnInit{
+export class TypeUserFormControlComponent implements OnInit{
   Typename = new FormControl('');
-  userType : UserType;
+  TypeUser : TypeUser;
 
-  constructor(private userTypeService : UserTypeServiceService){
-    this.userType = new UserType();
+  constructor(private TypeUserService : UserTypeServiceService){
+    this.TypeUser = new TypeUser();
   }
 
   ngOnInit(): void {
-    this.userType.type = "NoTypeName";
+    this.TypeUser.type = "NoTypeName";
   }
   
   SendAnswer(){
 
     if (this.Typename.value == null){
-      this.userType.type = "";
+      this.TypeUser.type = "";
     }
     else {
-      this.userType.type = this.Typename.value;
+      this.TypeUser.type = this.Typename.value;
     }
 
-    this.userTypeService.createTypeUser(this.userType);
+    this.TypeUserService.createTypeUser(this.TypeUser);
     console.log("new type incoming");
     
 

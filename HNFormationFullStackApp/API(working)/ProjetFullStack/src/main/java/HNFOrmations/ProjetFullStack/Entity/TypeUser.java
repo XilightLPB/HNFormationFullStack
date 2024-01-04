@@ -1,10 +1,10 @@
-package Entity;
+package HNFOrmations.ProjetFullStack.Entity;
 
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "type_user")
+@Table(name = "usertype")
 public class TypeUser {
 
     @Id
@@ -12,7 +12,7 @@ public class TypeUser {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "type_user")
+    @Column(name = "usertype")
     private String type;
 
     public TypeUser() {

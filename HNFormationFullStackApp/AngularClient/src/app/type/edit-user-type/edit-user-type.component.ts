@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { UserType } from '../../user-type';
+import { TypeUser } from '../../user-type';
 import { UserTypeServiceService } from '../../user-type-service.service';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export class EditUserTypeComponent implements OnInit{
   Typename : FormControl;
-  userType : UserType;
+  userType : TypeUser;
   id :number;
 
   constructor(private userTypeService : UserTypeServiceService, private route:ActivatedRoute){
@@ -23,7 +23,7 @@ export class EditUserTypeComponent implements OnInit{
     this.userTypeService.getTypeUserById(Id).subscribe(
       (user) => 
       {
-        this.userType = user as UserType;
+        this.userType = user as TypeUser;
         this.Typename = new FormControl({value: this.userType.type, disabled: false});
         this.id = user.id;
       }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserType } from './user-type';
+import { TypeUser} from './user-type';
 import { Observable, retry } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { type } from 'os';
@@ -13,20 +13,20 @@ export class UserTypeServiceService {
 
   constructor(private http: HttpClient) {}
 
-  getAllTypeUser(): Observable<UserType []> {
-    return this.http.get<UserType []>(this.typeUsersUrl);
+  getAllTypeUser(): Observable<TypeUser[]> {
+    return this.http.get<TypeUser []>(this.typeUsersUrl);
   }
 
-  getTypeUserById(id: number): Observable<UserType > {
-    return this.http.get<UserType>(this.typeUsersUrl+"/"+id);
+  getTypeUserById(id: number): Observable<TypeUser > {
+    return this.http.get<TypeUser>(`${this.typeUsersUrl}/${id}`);
   }
 
-  createTypeUser(typeUser: UserType ): Observable<UserType > {
-    return this.http.post<UserType >(`${this.typeUsersUrl}/create`, typeUser);
+  createTypeUser(typeUser: TypeUser ): Observable<TypeUser > {
+    return this.http.post<TypeUser >(`${this.typeUsersUrl}/create`, typeUser);
   }
 
-  updateTypeUser(typeUser: UserType ): Observable<UserType > {
-    return this.http.put<UserType >(`${this.typeUsersUrl}/update`, typeUser);
+  updateTypeUser(typeUser: TypeUser ): Observable<TypeUser > {
+    return this.http.put<TypeUser >(`${this.typeUsersUrl}/update`, typeUser);
   }
 
   delete(id: number) {

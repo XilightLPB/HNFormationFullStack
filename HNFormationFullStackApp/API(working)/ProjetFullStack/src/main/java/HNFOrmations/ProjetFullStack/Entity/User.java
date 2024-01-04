@@ -1,8 +1,4 @@
-/**
- * 
- */
-package Entity;
-
+package HNFOrmations.ProjetFullStack.Entity;
 
 import jakarta.persistence.*;
 

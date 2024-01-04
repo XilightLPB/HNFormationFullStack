@@ -1,6 +1,6 @@
 import { Component, Type } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { UserType } from '../../user-type';
+import { TypeUser } from '../../user-type';
 import { UserTypeServiceService } from '../../user-type-service.service';
 import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -20,8 +20,8 @@ export class UserEditComponent implements OnInit{
   name : FormControl;
   email : FormControl;
   user : User;
-  UserTypeList: UserType[];
-  type : UserType;
+  UserTypeList: TypeUser[];
+  type : TypeUser;
   id : string;
   
   constructor (private userService: UserServiceService,  private route:ActivatedRoute, private userTypeService: UserTypeServiceService){
@@ -29,7 +29,7 @@ export class UserEditComponent implements OnInit{
     console.log(`going for Transaction ID:${Id}`);
     this.userTypeService.getAllTypeUser().subscribe(
       data => {
-        this.UserTypeList = data as UserType[];
+        this.UserTypeList = data as TypeUser[];
       }
     )
     
@@ -72,7 +72,7 @@ export class UserEditComponent implements OnInit{
 
   }
 
-  SetCurrentTypeOf(type: UserType){
+  SetCurrentTypeOf(type: TypeUser){
     this.type = type;
   }
 

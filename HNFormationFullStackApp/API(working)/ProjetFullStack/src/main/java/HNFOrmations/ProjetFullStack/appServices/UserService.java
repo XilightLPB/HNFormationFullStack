@@ -1,8 +1,8 @@
-package AppServices;
+package HNFOrmations.ProjetFullStack.appServices;
 
 import org.springframework.stereotype.Service;
 
-import Entity.User;
+import HNFOrmations.ProjetFullStack.Entity.User;
 
 import java.util.List;
 

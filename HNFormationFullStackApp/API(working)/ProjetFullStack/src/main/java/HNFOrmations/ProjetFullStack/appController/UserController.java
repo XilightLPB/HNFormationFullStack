@@ -1,13 +1,14 @@
-package appController;
+package HNFOrmations.ProjetFullStack.appController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import Entity.TypeUser;
-import Entity.User;
-import AppServices.TypeUserService;
-import AppServices.UserService;
+
+import HNFOrmations.ProjetFullStack.Entity.TypeUser;
+import HNFOrmations.ProjetFullStack.Entity.User;
+import HNFOrmations.ProjetFullStack.appServices.TypeUserService;
+import HNFOrmations.ProjetFullStack.appServices.UserService;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/users")
+@RequestMapping("users")
 public class UserController {
     private UserService userService;
     private TypeUserService typeUserService;
@@ -28,7 +29,7 @@ public class UserController {
     }
 
     //done
-    @GetMapping("")
+    @GetMapping("/")
     public List<User> findAll() {
         return userService.findAll();
     }

@@ -9,7 +9,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
 
 import { UserTypeListComponent } from './type/user-type-list/user-type-list.component';
 import { FormControlComponent } from './users/form-control/form-control.component';
-import { UserTypeFormControlComponent } from './type/user-type-form-control/user-type-form-control.component';
+import { TypeUserFormControlComponent } from './type/user-type-form-control/user-type-form-control.component';
 import { EditUserTypeComponent } from './type/edit-user-type/edit-user-type.component';
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'TypeEdit/:id', component:EditUserTypeComponent},
   {path:'Users', component:UserListComponent},
   {path:'TypeEdit', component:EditUserTypeComponent},
-  {path:'TypeForm', component:UserTypeFormControlComponent},
+  {path:'TypeForm', component:TypeUserFormControlComponent},
   {path:'TypeList', component:UserTypeListComponent},
   {path: 'AddUser', component:FormControlComponent},
   

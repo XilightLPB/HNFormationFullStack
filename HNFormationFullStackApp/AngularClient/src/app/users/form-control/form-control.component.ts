@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../user';
 import { UserServiceService } from '../../user-service.service';
-import { UserType } from '../../user-type';
+import { TypeUser } from '../../user-type';
 import { UserTypeServiceService } from '../../user-type-service.service';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MatFormFieldModule} from '@angular/material/form-field';
@@ -20,18 +20,18 @@ export class FormControlComponent {
   name = new FormControl('');
   email = new FormControl('');
   user : User;
-  UserTypeList : UserType [];
-  type : UserType;
+  UserTypeList : TypeUser [];
+  type : TypeUser;
   
   constructor (private userService: UserServiceService, private userTypeService: UserTypeServiceService){
     this.user = new User();
     this.userTypeService.getAllTypeUser().subscribe(
       data => {
-        this.UserTypeList = data as UserType[];
+        this.UserTypeList = data as TypeUser[];
       }
       
     )
-    let Random = new UserType();
+    let Random = new TypeUser();
     Random.id = 666;
     Random.type = "No type for the moment";
     this.type = Random;
@@ -58,7 +58,7 @@ export class FormControlComponent {
 
   }
 
-  SetCurrentTypeOf(type: UserType){
+  SetCurrentTypeOf(type: TypeUser){
     this.type = type;
   }
   

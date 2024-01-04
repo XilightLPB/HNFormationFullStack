@@ -1,8 +1,8 @@
-package Repos;
+package HNFOrmations.ProjetFullStack.Repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import Entity.TypeUser;
+import HNFOrmations.ProjetFullStack.Entity.TypeUser;
 
 import java.util.List;
 

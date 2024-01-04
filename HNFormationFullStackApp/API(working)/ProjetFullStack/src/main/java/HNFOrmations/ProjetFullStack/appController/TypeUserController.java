@@ -1,11 +1,12 @@
-package appController;
+package HNFOrmations.ProjetFullStack.appController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import Entity.TypeUser;
-import AppServices.TypeUserService;
+
+import HNFOrmations.ProjetFullStack.Entity.TypeUser;
+import HNFOrmations.ProjetFullStack.Services.TypeUserService;
 
 import java.util.List;
 
@@ -16,11 +17,11 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @RequestMapping("/type-users")
 public class TypeUserController {
 
-    private TypeUserService typeUserService;
+    private HNFOrmations.ProjetFullStack.appServices.TypeUserService typeUserService;
 
     @Autowired
-    public TypeUserController(TypeUserService typeUserService) {
-        this.typeUserService = typeUserService;
+    public TypeUserController(HNFOrmations.ProjetFullStack.appServices.TypeUserService Service) {
+        this.typeUserService = Service;
     }
 
     @GetMapping("")

@@ -1,26 +1,27 @@
-package AppServices;
+package HNFOrmations.ProjetFullStack.appServices;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import Repos.TypeUserRepository;
-import Repos.UserRepository;
-import Entity.TypeUser;
-import Entity.User;
+import HNFOrmations.ProjetFullStack.Repos.UserRepository;
+import HNFOrmations.ProjetFullStack.Repos.TypeUserRepository;
+import HNFOrmations.ProjetFullStack.Entity.TypeUser;
+import HNFOrmations.ProjetFullStack.Entity.User;
+
 
 public class TypeUserOperations implements TypeUserService {
 
-    private TypeUserRepository typeUserRepository;
+	private TypeUserRepository typeUserRepository;
     private UserRepository userRepository;
-
+    
     @Autowired
     public TypeUserOperations(TypeUserRepository typeUserRepository, UserRepository userRepository) {
         this.typeUserRepository = typeUserRepository;
         this.userRepository = userRepository;
     }
-
+    
     @Override
     public List<TypeUser> findAll() {
         return typeUserRepository.findAll();

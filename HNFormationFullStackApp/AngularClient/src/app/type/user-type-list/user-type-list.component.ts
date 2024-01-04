@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserType } from '../../user-type';
+import { TypeUser } from '../../user-type';
 import { UserTypeServiceService } from '../../user-type-service.service';
 import { OnInit } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { OnInit } from '@angular/core';
 })
 export class UserTypeListComponent implements OnInit {
 
-  UsersTypes : UserType []
+  UsersTypes : TypeUser []
 
   constructor(private userService: UserTypeServiceService){}
 

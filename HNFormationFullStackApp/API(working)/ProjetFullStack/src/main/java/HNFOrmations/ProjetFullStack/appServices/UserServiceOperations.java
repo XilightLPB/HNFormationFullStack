@@ -1,12 +1,12 @@
-package AppServices;
+package HNFOrmations.ProjetFullStack.appServices;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import Entity.User;
-import Repos.UserRepository;
+import HNFOrmations.ProjetFullStack.Entity.User;
+import HNFOrmations.ProjetFullStack.Repos.UserRepository;
 
 public class UserServiceOperations implements UserService {
 
