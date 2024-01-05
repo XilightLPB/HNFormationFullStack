@@ -1,12 +1,13 @@
 package HNFOrmations.ProjetFullStack.appController;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 
 import HNFOrmations.ProjetFullStack.Entity.TypeUser;
-import HNFOrmations.ProjetFullStack.Services.TypeUserService;
+import HNFOrmations.ProjetFullStack.appServices.*;
 
 import java.util.List;
 
@@ -17,10 +18,10 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @RequestMapping("/type-users")
 public class TypeUserController {
 
-    private HNFOrmations.ProjetFullStack.appServices.TypeUserService typeUserService;
+    private TypeUserService typeUserService;
 
     @Autowired
-    public TypeUserController(HNFOrmations.ProjetFullStack.appServices.TypeUserService Service) {
+    public TypeUserController(TypeUserService Service) {
         this.typeUserService = Service;
     }
 
@@ -33,12 +34,12 @@ public class TypeUserController {
     public TypeUser findById(@PathVariable int id) {
         return typeUserService.findById(id);
     }
-
+    @Transactional
     @PostMapping("/create")
     public TypeUser addTypeUser(@RequestBody TypeUser typeUser) {
         return typeUserService.save(typeUser);
     }
-
+    @Transactional
     @PutMapping("/update")
     public TypeUser updateTypeUser(@RequestBody TypeUser typeUser) {
         int id = typeUser.getId();

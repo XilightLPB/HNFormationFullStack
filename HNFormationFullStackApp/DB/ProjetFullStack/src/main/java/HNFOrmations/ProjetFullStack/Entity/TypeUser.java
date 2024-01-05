@@ -42,7 +42,7 @@ public class TypeUser {
     public String toString() {
         return "TypeUser{" +
                 "id=" + id +
-                ", type_user='" + type + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

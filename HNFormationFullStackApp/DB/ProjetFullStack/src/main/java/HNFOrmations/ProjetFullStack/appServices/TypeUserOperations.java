@@ -1,6 +1,7 @@
 package HNFOrmations.ProjetFullStack.appServices;
 
 import java.util.List;
+import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import HNFOrmations.ProjetFullStack.Repos.TypeUserRepository;
 import HNFOrmations.ProjetFullStack.Entity.TypeUser;
 import HNFOrmations.ProjetFullStack.Entity.User;
 
-
+@Service
 public class TypeUserOperations implements TypeUserService {
 
 	private TypeUserRepository typeUserRepository;
@@ -40,6 +41,7 @@ public class TypeUserOperations implements TypeUserService {
 
     @Override
     public TypeUser save(TypeUser typeUser) {
+    	System.out.print(typeUser.toString());
         return typeUserRepository.save(typeUser);
     }
 

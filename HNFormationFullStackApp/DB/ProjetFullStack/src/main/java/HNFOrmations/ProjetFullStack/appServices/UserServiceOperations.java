@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import HNFOrmations.ProjetFullStack.Entity.User;
 import HNFOrmations.ProjetFullStack.Repos.UserRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceOperations implements UserService {
 
 	private UserRepository userRepository;

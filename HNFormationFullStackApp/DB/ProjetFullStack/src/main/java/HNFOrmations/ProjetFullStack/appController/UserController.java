@@ -17,7 +17,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController {
     private UserService userService;
     private TypeUserService typeUserService;
@@ -29,7 +29,7 @@ public class UserController {
     }
 
     //done
-    @GetMapping("/")
+    @GetMapping("")
     public List<User> findAll() {
         return userService.findAll();
     }
